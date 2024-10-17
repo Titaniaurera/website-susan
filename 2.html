@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Beranda</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Menyembunyikan scroll bar */
+            height: 100vh;
+            background: #000;
+        }
+
+        .parallax {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Gambar latar belakang dengan efek blur */
+        .parallax img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translateZ(-1px) scale(1.5);
+            filter: blur(5px); /* Menambahkan blur */
+            z-index: -1;
+        }
+
+        /* Navbar container dengan gradasi dari pink gelap ke hitam */
+        .navbar-container {
+            background: linear-gradient(to right, #d10077, #000000); /* Gradasi pink gelap ke hitam */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+            font-family: 'Saira', sans-serif; /* Menggunakan font Saira */
+            font-weight: normal; /* Menghilangkan bold */
+        }
+
+        .navbar a:hover {
+            color: #fac0d1; /* Warna saat hover */
+        }
+
+        .content {
+            position: absolute;
+            top: 60%; /* Posisi gambar lebih ke bawah */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+            grid-gap: 20px; /* Jarak antara kotak gambar */
+            justify-items: center;
+            align-items: center;
+            width: 80%;
+        }
+
+        .content div {
+            width: 200px;
+            height: 260px; /* Tinggi yang lebih besar untuk mengakomodasi bingkai */
+            margin: 10px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #df4988; /* Bingkai di belakang gambar */
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Saira', sans-serif; /* Menggunakan font Saira */
+            font-weight: normal; /* Menghilangkan bold */
+        }
+
+        .content div img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: relative;
+            top: -20px; /* Menimpa bagian atas bingkai */
+        }
+
+        /* Kapsul di bawah gambar untuk teks "Komik Susan" */
+        .capsule {
+            position: absolute;
+            bottom: 10px; /* Posisi di bagian bawah bingkai */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff0066;
+            padding: 5px 20px;
+            border-radius: 20px;
+            color: rgba(206, 39, 122, 0.822);
+            font-size: 16px;
+            z-index: 2;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .capsule p {
+            margin: 0;
+        }
+
+        /* Hover effect */
+        .content div:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Teks di bawah gambar */
+        .content div a {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            margin-top: 10px;
+            text-decoration: none;
+            font-family: 'Saira', sans-serif; /* Menggunakan font Saira */
+            font-weight: normal; /* Menghilangkan bold */
+        }
+
+        .content div a:hover {
+            color: #ff8df5; /* Warna saat hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <img src="background.jpg" alt="Background Image"> <!-- Ganti dengan gambar latar belakang -->
+    </div>
+
+    <!-- Navbar container dengan gradasi dari pink gelap ke hitam -->
+    <div class="navbar-container">
+        <nav class="navbar">
+            <a href="2.html">Komik Susan</a>
+            <a href="core.pdf">Core Memory</a>
+            <a href="kartu ucapan.jpg">Ucapan</a> <!-- Link ke halaman index2.html -->
+            <a href="#">Code</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <!-- Gambar 1 dengan bingkai dan kapsul "Komik Susan" -->
+        <div>
+            <img src="p3.jpeg" alt="Gambar 1">
+            <a href="index2.html">Kemping Dadakan</a> <!-- Update href untuk link ke index2.html -->
+        </div>
+        <div>
+            <img src="p1.jpeg" alt="Gambar 2">
+            <a href="#">Bapak-Bapak Anomali</a>
+        </div>
+    </div>
+</body>
+</html>
